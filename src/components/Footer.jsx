@@ -20,7 +20,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-white">DevOps Tools</h3>
+          <h3 className="text-lg font-semibold mb-4 text-white">Tools</h3>
           <ul className="space-y-2">
             {toolsLinks.map((link, index) => (
               <li key={index}>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-10 text-center text-neutral-400 text-sm">
-        <p>&copy; {new Date().getFullYear()} DevOps Learning Hub. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} trippleScale. All Rights Reserved.</p>
       </div>
     </footer>
   );

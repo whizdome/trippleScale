@@ -10,7 +10,7 @@ const FeatureSection = () => {
         <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
           Master{" "}
           <span className="bg-gradient-to-r from-blue-500 to-green-800 text-transparent bg-clip-text">
-            DevOps Essentials
+            Employable Tech Essential Skills
           </span>
         </h2>
       </div>
