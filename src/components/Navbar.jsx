@@ -40,16 +40,9 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a 
-              href="#about" 
-              onClick={(e) => handleNavClick(e, '#about')} 
-              className="py-2 px-3 border rounded-md"
-            >
-              About the Course
-            </a>
             <a
-              href="#enroll"
-              onClick={(e) => handleNavClick(e, '#enroll')}
+              href="#courses"
+              onClick={(e) => handleNavClick(e, '#courses')}
               className="bg-gradient-to-r from-blue-500 to-blue-800 py-2 px-3 rounded-md"
             >
               Get Started

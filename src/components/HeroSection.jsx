@@ -4,26 +4,23 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        Master DevOps with
+        Master Tech with
         <span className="bg-gradient-to-r from-blue-500 to-green-800 text-transparent bg-clip-text">
           {" "}
           trippleScale
         </span>
       </h1>
       <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-        Unlock the power of DevOps and take your career to new heights. Learn
-        the tools, techniques, and workflows used by top organizations to
-        streamline software development and operations.
+        Unlock the power of technology and take your career to new heights. Learn
+        the tools, techniques, and skills used by top organizations to
+        excel in the tech industry through interactive live classes.
       </p>
       <div className="flex justify-center my-10">
         <a
-          href="#"
+          href="#courses"
           className="bg-gradient-to-r from-blue-500 to-green-800 py-3 px-4 mx-3 rounded-md"
         >
           Get Started
-        </a>
-        <a href="#learn-more" className="py-3 px-4 mx-3 rounded-md border">
-          Learn More
         </a>
       </div>
       <div className="flex mt-10 justify-center">

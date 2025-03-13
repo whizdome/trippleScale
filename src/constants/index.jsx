@@ -1,4 +1,4 @@
-import { BotMessageSquare, BatteryCharging, Fingerprint, ShieldHalf, PlugZap, GlobeLock } from "lucide-react";
+import { Cloud, Server, Code, Layers, Terminal, ShieldCheck } from "lucide-react";
 
 import user1 from "../assets/profile-pictures/user1.jpg";
 import user2 from "../assets/profile-pictures/user2.jpg";
@@ -9,145 +9,124 @@ import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
   { label: "Features", href: "#features" },
-  { label: "Modules", href: "#modules" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Courses", href: "#courses" },
   { label: "Testimonials", href: "#testimonials" },
 ];
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
-    text: "Hands-On Labs",
+    icon: <Cloud />,
+    text: "Cloud Computing",
     description:
-      "Engage in practical labs that simulate real-world DevOps challenges using modern tools.",
+      "Master AWS and Azure services, including compute, storage, networking, and security best practices.",
   },
   {
-    icon: <Fingerprint />,
-    text: "Multi-Cloud Mastery",
+    icon: <Server />,
+    text: "DevOps & Automation",
     description:
-      "Learn to deploy and manage applications on AWS, Azure, and Google Cloud platforms.",
+      "Learn CI/CD, Infrastructure as Code (IaC), monitoring, and automation using industry-leading tools.",
   },
   {
-    icon: <ShieldHalf />,
-    text: "CI/CD Pipelines",
+    icon: <Code />,
+    text: "Python Programming",
     description:
-      "Master the creation of continuous integration and continuous delivery pipelines to automate workflows.",
+      "Develop strong coding skills in Python, covering data structures, automation, APIs, and web development.",
   },
   {
-    icon: <BatteryCharging />,
-    text: "Infrastructure as Code",
+    icon: <Layers />,
+    text: "Full-Stack Development",
     description:
-      "Gain hands-on experience with tools like Terraform and Ansible to automate and scale infrastructure.",
+      "Build scalable web applications using Next.js, React, and backend APIs with modern frameworks.",
   },
   {
-    icon: <PlugZap />,
-    text: "Real-Time Monitoring",
+    icon: <Terminal />,
+    text: "Containerization & Orchestration",
     description:
-      "Implement monitoring and logging tools like Prometheus and Grafana to keep systems running smoothly.",
+      "Deploy and manage containers with Docker and Kubernetes for scalable applications.",
   },
   {
-    icon: <GlobeLock />,
-    text: "Security Best Practices",
+    icon: <ShieldCheck />,
+    text: "Cloud Security & Compliance",
     description:
-      "Learn essential practices to secure your pipelines and applications against modern threats.",
+      "Implement security best practices, IAM, encryption, and compliance standards in cloud environments.",
   },
 ];
 
+
 export const testimonials = [
   {
-    user: "John DevOps",
-    company: "Cloud Innovators",
+    user: "Alex Chen",
+    company: "Silicon Innovations",
     image: user1,
-    text: "This course transformed my career. The hands-on labs and real-world scenarios made me job-ready in no time.",
+    text: "From zero coding experience to full-stack developer in 6 months. The project-based learning approach made complex concepts click.",
   },
   {
-    user: "Jane Automation",
-    company: "Tech Titans",
+    user: "Maria Rodriguez",
+    company: "Data Dynamics",
     image: user2,
-    text: "Learning DevOps has never been easier. The instructors are experienced and ensure you truly understand the concepts.",
+    text: "The data science track gave me the perfect mix of statistics and programming. Now I'm confidently building ML models at work.",
   },
   {
-    user: "David Pipeline",
-    company: "Startup Ventures",
+    user: "James Wilson",
+    company: "Cloud Solutions Inc",
     image: user3,
-    text: "The skills I gained from this course landed me my first DevOps role. Highly recommended for anyone looking to break into tech!",
+    text: "The cloud computing modules were fantastic. Learning AWS and Azure simultaneously gave me a competitive edge in the job market.",
   },
   {
-    user: "Emily SRE",
-    company: "NextGen Systems",
+    user: "Priya Patel",
+    company: "Mobile Innovators",
     image: user4,
-    text: "I loved the structured approach. From basics to advanced topics, this course has it all!",
+    text: "Transitioning from web to mobile development was seamless thanks to the comprehensive React Native and Swift courses.",
   },
   {
-    user: "Michael Infrastructure",
-    company: "Enterprise Solutions",
+    user: "Thomas Schmidt",
+    company: "Security First",
     image: user5,
-    text: "Building infrastructure as code was a game-changer for me. The projects helped me understand best practices.",
+    text: "The cybersecurity program covered everything from network security to ethical hacking. It prepared me perfectly for my Security+ certification.",
   },
   {
-    user: "Sarah Jenkins",
-    company: "Agile DevOps",
+    user: "Lisa Montgomery",
+    company: "DevOps Enterprise",
     image: user6,
-    text: "The practical sessions on CI/CD pipelines and monitoring were extremely valuable. I feel confident in my skills now!",
+    text: "Whether it's CI/CD or cloud architecture, the hands-on labs made learning DevOps principles engaging and practical.",
   },
 ];
 
 export const checklistItems = [
   {
-    title: "Build CI/CD Pipelines",
+    title: "Master Modern Development",
     description:
-      "Automate deployments and integrate continuous testing to streamline workflows.",
+      "Build full-stack applications using popular frameworks like React, Node.js, and Python Django.",
   },
   {
-    title: "Infrastructure as Code",
+    title: "Cloud & DevOps Excellence",
     description:
-      "Manage scalable infrastructure using tools like Terraform and CloudFormation.",
+      "Deploy and scale applications across major cloud platforms while implementing DevOps best practices.",
   },
   {
-    title: "Master Containerization",
+    title: "Data Science & AI",
     description:
-      "Deploy containerized applications with Docker and orchestrate them with Kubernetes.",
+      "Learn data analysis, machine learning, and AI implementation using Python, TensorFlow, and PyTorch.",
   },
   {
-    title: "Enhance Team Collaboration",
+    title: "Mobile Development",
     description:
-      "Use Git and DevOps tools to improve code quality and streamline teamwork.",
-  },
-];
-
-export const pricingOptions = [
-  {
-    title: "Free",
-    price: "$0",
-    features: [
-      "Access to introductory modules",
-      "Community support",
-      "Basic CI/CD pipeline setup tutorials",
-    ],
+      "Create cross-platform mobile apps using React Native and native development with Swift and Kotlin.",
   },
   {
-    title: "Pro",
-    price: "$50",
-    features: [
-      "Access to advanced modules",
-      "One-on-one mentorship sessions",
-      "Hands-on labs for Docker and Kubernetes",
-    ],
+    title: "Cybersecurity Fundamentals",
+    description:
+      "Understand security principles, implement secure systems, and prepare for key industry certifications.",
   },
   {
-    title: "Enterprise",
-    price: "$200",
-    features: [
-      "Full course access",
-      "Dedicated instructor support",
-      "Certificate of completion",
-      "Exclusive job placement assistance",
-    ],
+    title: "UI/UX Design",
+    description:
+      "Master user interface design, prototyping tools, and user research methodologies.",
   },
 ];
 
 export const devopsResourcesLinks = [
-  { href: "#", text: "Learning Paths" },
+  { href: "https://roadmap.sh", text: "Roadmaps" },
   { href: "#", text: "Course Modules" },
   { href: "#", text: "Practice Labs" },
   { href: "#", text: "Study Guides" },
@@ -155,17 +134,17 @@ export const devopsResourcesLinks = [
 ];
 
 export const toolsLinks = [
-  { href: "#", text: "Docker" },
-  { href: "#", text: "Kubernetes" },
-  { href: "#", text: "Jenkins" },
-  { href: "#", text: "Terraform" },
-  { href: "#", text: "Git" },
+  { href: "https://docker.com/", text: "Docker" },
+  { href: "https://kubernetes.io/", text: "Kubernetes" },
+  { href: "https://jenkins.io/", text: "Jenkins" },
+  { href: "https://terraform.io/", text: "Terraform" },
+  { href: "https://git-scm.com/", text: "Git" },
 ];
 
 export const communityLinks = [
   { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
+  { href: "https://meet.google.com", text: "Meetups" },
   { href: "#", text: "Conferences" },
   { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  { href: "https://linkedin.com", text: "Jobs" },
 ];
