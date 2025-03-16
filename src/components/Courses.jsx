@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Search, Clock, Book, Users, Star } from "lucide-react";
+import { parsePhoneNumber, isValidPhoneNumber } from 'libphonenumber-js';
 
 // Importing SVG logos
 import AwsLogo from "../assets/aws-logo.svg"; 
@@ -8,6 +9,7 @@ import AzureLogo from "../assets/azure-logo.svg";
 import DevOpsLogo from "../assets/devops-logo.svg"; 
 import NextJsLogo from "../assets/next-js-logo.svg"; 
 import PythonLogo from "../assets/python-logo.svg";
+import MobileLogo from "../assets/mobile-logo.svg";
 
 const courses = [
   {
@@ -100,7 +102,24 @@ const courses = [
       "Building Python Applications: Writing and deploying Python applications with best practices.",
     ],
 },
-
+{
+  id: 6,
+  title: "Mobile App Development",
+  logo: MobileLogo,
+  price: "£600",
+  duration: "10 weeks",
+  level: "Intermediate",
+  students: 845,
+  rating: 4.6,
+  category: "Mobile Development",
+  outline: [
+    "Introduction to Mobile Development: Understanding mobile platforms and development approaches",
+    "React Native Fundamentals: Building cross-platform mobile apps with React Native",
+    "Native iOS Development: Swift programming and iOS app development basics",
+    "Native Android Development: Kotlin programming and Android app development",
+    "App Publishing & Monetization: Publishing to App Store and Play Store, monetization strategies",
+  ],
+},
 ];
 
 const Courses = () => {
@@ -111,7 +130,7 @@ const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [formErrors, setFormErrors] = useState({});
 
-  const categories = ["All", "Cloud Computing", "DevOps", "Web Development", "Programming"];
+  const categories = ["All", "Cloud Computing", "DevOps", "Web Development", "Programming", "Mobile Development"];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -120,12 +139,38 @@ const Courses = () => {
     setFormErrors({ ...formErrors, [name]: "" });
   };
 
+  const handlePhoneChange = (e) => {
+    let value = e.target.value.replace(/[^\d+]/g, '');
+    try {
+      if (value.length > 4) {
+        const phoneNumber = parsePhoneNumber(value);
+        if (phoneNumber) {
+          value = phoneNumber.formatInternational();
+        }
+      }
+    } catch (error) {
+      // Keep the raw input if parsing fails
+    }
+    setFormData({ ...formData, phone: value });
+    setFormErrors({ ...formErrors, phone: "" });
+  };
+
   const validateForm = () => {
     const errors = {};
     if (!formData.name.trim()) errors.name = "Name is required";
     if (!formData.email.trim()) errors.email = "Email is required";
     if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = "Invalid email format";
     if (!formData.phone.trim()) errors.phone = "Phone is required";
+    
+    // Phone number validation
+    try {
+      if (!isValidPhoneNumber(formData.phone)) {
+        errors.phone = "Please enter a valid phone number";
+      }
+    } catch (error) {
+      errors.phone = "Please enter a valid phone number";
+    }
+    
     return errors;
   };
 
@@ -339,7 +384,8 @@ const Courses = () => {
                           type="tel"
                           name="phone"
                           value={formData.phone}
-                          onChange={handleInputChange}
+                          onChange={handlePhoneChange}
+                          placeholder="+1 234 567 8900"
                           className={`w-full p-3 rounded-lg bg-gray-800 text-white border ${
                             formErrors.phone ? 'border-red-500' : 'border-gray-700'
                           }`}
@@ -347,6 +393,7 @@ const Courses = () => {
                         {formErrors.phone && (
                           <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>
                         )}
+                        <p className="text-gray-400 text-sm mt-1">Enter phone number with country code (e.g., +44)</p>
                       </div>
                       <button
                         type="button"
